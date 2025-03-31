@@ -38,12 +38,9 @@ int main () {
     cin >> respuesta1;
 
 
-    while (respuesta1 != 'a','b','c') {
+    while (respuesta1 != 'a' && respuesta1 != 'b' && respuesta1 != 'c') {
         cout << "\nIncorrecto, respuesta debe de ser a, b o c, intente de nuevo: " << endl;
         cin >> respuesta1;
-        if (respuesta1 == 'a','b','c') {
-            break;
-        }
     }
 
 
@@ -59,12 +56,9 @@ int main () {
     cin >> respuesta2;
 
 
-    while (respuesta2 != 'a', 'b') {
+    while (respuesta2 != 'a' && respuesta2 != 'b') {
         cout << "\nIncorrecto, respuesta debe de ser letra a o b, intente de nuevo: " << endl;
         cin >> respuesta2;
-        if (respuesta2 == 'a', 'b') {
-            break;
-        }
     }
 
 
