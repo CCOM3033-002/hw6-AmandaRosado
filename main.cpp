@@ -15,10 +15,12 @@ o el área de la superficie de la figura escogida.
 using namespace std;
 
 
+//Prototipos de las 6 funciones
 double volumen(double radio, double altura);
 
 double area_superficie(double radio2, double altura2);
 
+double volumen(double radio3);
 
 
 //Se crea funcion main
@@ -68,7 +70,7 @@ int main () {
     }
 
 
-
+    //Si las respuestas del usuario son 'a' y 'a' se hace este if
     if (respuesta1 == 'a' && respuesta2 == 'a') {
 
         double radio, altura;
@@ -79,11 +81,12 @@ int main () {
         cout << "\nIngrese la altura del cilindro: " << endl;
         cin >> altura;
     
+        //Se invoca funcion volumen para el cilindro
         cout << "\nEl volumen del cilindro es: " << volumen(radio, altura) << endl;
      }
 
 
-
+    //Si las respuestas del usuario son 'a' y 'b' se hace este if
     if (respuesta1 == 'a' && respuesta2 == 'b') {
 
         double radio2, altura2;
@@ -94,10 +97,21 @@ int main () {
         cout << "\nEntre la altura de su cilindro: " << endl;
         cin >> altura2;
 
+        //Se invoca funcion area_superficie para el cilindro
         cout << "\nEl area de superficie de su cilindro es: " << area_superficie(radio2, altura2) << endl;
     }
 
 
+    //Si las respuestas del usuario son 'b' y 'a' se hace este if
+    if (respuesta1 == 'b' && respuesta2 == 'a') {
+
+        double radio3;
+
+        cout << "\nEntre el radio de su esfera: " << endl;
+        cin >> radio3;
+    
+        cout << "\nEl volumen de su esfera es: " << volumen(radio3) << endl;
+    }
 
 
 
@@ -109,12 +123,19 @@ int main () {
 //Funcion para calcular el volumen de un cilindro
 double volumen(double radio, double altura) {
 
-    return (M_PI * pow(radio, 2) * altura);
+    return (M_PI * pow(radio, 2.0) * altura);
 }
 
 
 //Funcion para calcular el area de superficie de un cilindro
 double area_superficie(double radio2, double altura2) {
 
-    return (2 * M_PI * radio2 * altura2 + 2 * M_PI * pow(radio2, 2));
+    return (2.0 * M_PI * radio2 * altura2 + 2 * M_PI * pow(radio2, 2));
+}
+
+
+//Funcion para calcular el volumen de una esfera
+double volumen(double radio3) {
+
+    return ((4.0/3.0) * M_PI * pow(radio3, 3));
 }
