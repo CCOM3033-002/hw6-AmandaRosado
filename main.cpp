@@ -77,7 +77,7 @@ int main () {
 
 //-------------------------------------------------------------------------------------------------------------
 
-    //Si las respuestas del usuario son 'a' y 'a' se hace este if
+    //Si las respuestas del usuario son cilindro y volumen, se hace este if
     if (respuesta1 == 'a' && respuesta2 == 'a') {
 
         double radio, altura;
@@ -109,7 +109,7 @@ int main () {
      }
 
 
-    //Si las respuestas del usuario son 'a' y 'b' se hace este if
+    //Si las respuestas del usuario son cilindro y area de superficie, se hace este if
     if (respuesta1 == 'a' && respuesta2 == 'b') {
 
         double radio2, altura2;
@@ -141,7 +141,7 @@ int main () {
     }
 
 
-    //Si las respuestas del usuario son 'b' y 'a' se hace este if
+    //Si las respuestas del usuario son esfera y volumen, se hace este if
     if (respuesta1 == 'b' && respuesta2 == 'a') {
 
         double radio3;
@@ -163,7 +163,7 @@ int main () {
     }
 
 
-    //Si las respuestas del usuario son 'b' y 'b' se hace este if
+    //Si las respuestas del usuario son esfera y area de superficie, se hace este if
     if (respuesta1 == 'b' && respuesta2 == 'b') {
 
         double radio4;
@@ -185,7 +185,7 @@ int main () {
     }
 
 
-    //Si las respuestas del usuario son 'c' y 'a' se hace este if
+    //Si las respuestas del usuario son prisma rectangular y volumen, se hace este if
     if (respuesta1 == 'c' && respuesta2 == 'a') {
 
         double ancho, largo, altura3;
@@ -227,7 +227,7 @@ int main () {
     }
 
 
-    //Si las respuestas del usuario son 'c' y 'b' se hace este if
+    //Si las respuestas del usuario son prisma rectangular y area de superficie, se hace este if
     if (respuesta1 == 'c' && respuesta2 == 'b') {
 
         double longitud, ancho2, altura4;
@@ -299,7 +299,7 @@ double volumen(double radio3) {
 //Funcion para calcular el area de superficie de una esfera
 double area_superficie(double radio4) {
 
-    return (4 * M_PI * pow(radio4, 2);
+    return (4 * M_PI * pow(radio4, 2));
 }
 
 
