@@ -12,6 +12,7 @@ o el área de la superficie de la figura escogida.
 //Librerias utilizadas en el programa
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 
@@ -84,9 +85,25 @@ int main () {
         cout << "\nIngrese el radio del cilindro: " << endl;
         cin >> radio;
 
+        //Input validation para radio
+        while (radio <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> radio;
+        }
+
+
         cout << "\nIngrese la altura del cilindro: " << endl;
         cin >> altura;
-    
+
+        //Input validation para altura
+        while (altura <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> altura;
+        }
+
+
+        cout << fixed << setprecision(2);
+
         //Se invoca funcion volumen para el cilindro
         cout << "\nEl volumen del cilindro es: " << volumen(radio, altura) << endl;
      }
@@ -100,8 +117,24 @@ int main () {
         cout << "\nEntre el radio de su cilindro: " << endl;
         cin >> radio2;
 
+        //Input validation para radio2
+        while (radio2 <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> radio2;
+        }
+
+
         cout << "\nEntre la altura de su cilindro: " << endl;
         cin >> altura2;
+
+        //Input validation para altura2
+        while (altura2 <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> altura2;
+        }
+
+
+        cout << fixed << setprecision(2);
 
         //Se invoca funcion area_superficie para el cilindro
         cout << "\nEl area de superficie de su cilindro es: " << area_superficie(radio2, altura2) << endl;
@@ -116,6 +149,15 @@ int main () {
         cout << "\nEntre el radio de su esfera: " << endl;
         cin >> radio3;
     
+        //Input validation para radio3
+        while (radio3 <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> radio3;
+        }
+
+
+        cout << fixed << setprecision(2);
+
         //Se invoca funcion volumen para su esfera
         cout << "\nEl volumen de su esfera es: " << volumen(radio3) << endl;
     }
@@ -128,6 +170,15 @@ int main () {
 
         cout << "\nEntre el radio de su esfera: " << endl;
         cin >> radio4;
+
+        //Input validation para radio4
+        while (radio4 <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> radio4;
+        }
+
+
+        cout << fixed << setprecision(2);
 
         //Se invoca funcion area_superficie para su esfera
         cout << "\nEl area de superficie de su esfera es: " << area_superficie(radio4) << endl;
@@ -142,11 +193,34 @@ int main () {
         cout << "\nEntre el ancho de su prisma rectangular: " << endl;
         cin >> ancho;
 
+        //Input validation para ancho
+        while (ancho <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> ancho;
+        }
+
+
         cout << "\nEntre el largo de su prisma rectangular: " << endl;
         cin >> largo;
 
+        //Input validation para largo
+        while (largo <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> largo;
+        }
+
+
         cout << "\nEntre la altura de su prisma rectangular: " << endl;
         cin >> altura3;
+
+        //Input validation para altura3
+        while (altura3 <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> altura3;
+        }
+
+
+        cout << fixed << setprecision(2);
 
         //Se invoca funcion volumen para su prisma rectangular
         cout << "\nEl volumen de su prisma rectangular es: " << volumen(ancho, largo, altura3) << endl;
@@ -161,11 +235,34 @@ int main () {
         cout << "\nEntre la longitud de su prisma rectangular: " << endl;
         cin >> longitud;
 
+        //Input validation para longitud
+        while (longitud <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> longitud;
+        }
+
+
         cout << "\nEntre el ancho de su prisma rectangular: " << endl;
         cin >> ancho2;
 
+        //Input validation para ancho2
+        while (ancho2 <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> ancho2;
+        }
+
+
         cout << "\nEntre la altura de su prisma rectangular: " << endl;
         cin >> altura4;
+
+        //Input validation para altura4
+        while (altura4 <= 0) {
+            cout << "\nError, entre un numero positivo: " << endl;
+            cin >> altura4;
+        }
+
+
+        cout << fixed << setprecision(2);
 
         //Se invoca funcion area_superficie para su prisma rectangular
         cout << "\nEl area de superficie de su prisma rectangular es: " << area_superficie(longitud, ancho2, altura4) << endl;
@@ -202,7 +299,7 @@ double volumen(double radio3) {
 //Funcion para calcular el area de superficie de una esfera
 double area_superficie(double radio4) {
 
-    return (4 * M_PI * radio4 * 2);
+    return (4 * M_PI * pow(radio4, 2);
 }
 
 
